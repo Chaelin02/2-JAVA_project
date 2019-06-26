@@ -1,0 +1,65 @@
+package 수행평가;
+
+import java.util.Scanner;
+
+public class Tema {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+//		다시 back해서 선택 할 수 있도록.
+		System.out.println("*****세상제일 간단번역*****");
+		System.out.println("[1.학교에서]");
+		System.out.println("[2.일상생활에서]");
+		System.out.println("[3.회사에서]");
+		System.out.println("[4.공공장소에서]");
+		
+		int you = sc.nextInt();
+		//
+		
+		if(you == 1) {
+			System.out.println("[학교에서]");
+			System.out.println("1.교무실에서\t 2.반에서");
+			int you_2 = sc.nextInt();
+			if(you_2 == 1) {
+				System.out.println(
+						"	-1.선생님 여쭈어볼게 있어요.\r\n"+
+						"	-2.들어가도 될까요?\r\n" + 
+						"	-3.00선생님 계신가요?	\r\n" + 
+						"	-4.안녕히계세요");
+				int you_3 = sc.nextInt();
+				if(you_3 == 1) {
+					System.out.println("선생님 여쭈어볼게 있어요.");
+					System.out.println("\t<영어> - I need to ask you something.(아이 니드 투 에스크 유 섬띵)");
+					System.out.println("\t<일본어> - 先生,聞きたいことがあります。(센세이 키키타이 코토가 아리마스)");
+					System.out.println("\t<프랑스어> -J'ai une question.(주에잉 퀘스치용)");
+					System.out.println("\t<중국어> -老师,我有话要说。(라오쉬 워요 화야우 슈어)");
+					System.out.println("\t<스페인어> - Profesor, tengo algo que preguntar.(프로프소어 텡고 아르고 쿠 프레공타ㄹ)");
+				}//3end-if(1일때)
+				else if(you_3 == 2) {
+					System.out.println("들어가도 될까요?");
+					System.out.println("\t<영어> - May I come in? (메이 아이 컴 인) ");
+					System.out.println("\t<일본어> - 入ってもいいですか。(하잇 테모 이이데스카) ");
+					System.out.println("\t<프랑스어> -Est-ce que je peux entrer?(에스 츠 크 쥬 푸쉉 엔트위?)");
+					System.out.println("\t<중국어> - 我可以进去吗？ (워커이 이친 슈마)");
+					System.out.println("\t<스페인어> - Puedo entrar? (푸에도 엔트롸)");
+				}//3end-if(2일때)
+				else if(you_3 == 3) {
+					System.out.println("선생님 계신가요?");
+					System.out.println("\t<영어> - Is there a teacher? (이즈 데얼 어 티쳘?)");
+					System.out.println("\t<일본어> - 先生いらっしゃいますか? (센세이 이랏샤이 마스카?) ");
+					System.out.println("\t<프랑스어> - Y a-t-il un professeur ?(이 가잇 겟 틸 언 프로페서)");
+					System.out.println("\t<중국어> - 有老师吗?(요 라우 쉬 마)");
+					System.out.println("\t<스페인어> - ¿Está el profesor adentro? (이스타렐  프로페쇼 러어덴트롤)");
+				}//3end-if(3일때)
+				else if(you_3 == 4) {
+					System.out.println("안녕히계세요");
+					System.out.println("\t<영어> - Goodbye.(굳 바이)");
+					System.out.println("\t<일본어> - お気をつけて(오키오 츠케테) ");
+					System.out.println("\t<프랑스어> - Au revoir(오 뷔 부아)");
+					System.out.println("\t<중국어> -再见。(짜이찌엔) ");
+					System.out.println("\t<스페인어> - ¡Adiós!(아디오스)");
+				}//3end-if(4일때)
+			}//2end-if
+		}//you-if
+	
+	}//main
+}

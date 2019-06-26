@@ -1,0 +1,47 @@
+package 수행평가;
+
+import java.util.Scanner;
+
+public class main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//↓ 여기서부터
+		while(true) {
+			System.out.println("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓");     
+			System.out.println("알고싶은 표현을 선택하세요");
+			System.out.println("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓");
+			System.out.println("\n 0.학교에서 \n 1.회사에서 \n 2.공공장소에서 \n 3.일상생활에서 ");
+			
+			int User_A = sc.nextInt(); 
+		//↑여기까지 공통으로 나와야하는 출력문이여서 main에 집어넣었고 반복을 해야하기 때문에 while(true)를 했음
+			
+			if(User_A == 0) {  							//만약 USer_A가 0을 눌렀을 때
+				School school = new School();			//학교에서의 School.java의 객체 생성
+				school.school();						// 학교의 school을 불러온다. 
+			}else if(User_A == 1) {						//만약 USer_A가 1을 눌렀을 때
+				Office office = new Office(); 			//회사에서의 객체생성
+				office.office();
+			}else if(User_A == 2) {						//User_A가 2를 눌렀을 때
+				Public_1 public_1 = new Public_1();			//공공장소의 객체생성
+				public_1.public_1();
+			}else if(User_A == 3) {							//User_A가 3을 눌렀을 때 
+				Life life = new Life();						//일상생활에서의 객체 생성
+				life.life();
+			}
+			
+			while(true) {
+				System.out.println("표현보기를 종료하시겠습니까?(y/n) : ");
+				String answer = sc.next();
+				if(answer.equals("y") || answer.equals("Y")) {
+					System.exit(0);
+				}else if(answer.equals("n") || answer.equals("N")){
+					break;
+				}
+				else { 
+					System.out.println("다시 입력해주세요.");
+				}
+			}		
+		}//while
+		
+	}//main
+}

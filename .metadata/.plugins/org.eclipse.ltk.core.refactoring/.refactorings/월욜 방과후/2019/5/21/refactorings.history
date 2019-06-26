@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Constructor.Feild&apos; to &apos;FieldInitValue&apos;&#x0D;&#x0A;- Original project: &apos;월욜 방과후&apos;&#x0D;&#x0A;- Original element: &apos;Constructor.Feild&apos;&#x0D;&#x0A;- Renamed element: &apos;Constructor.FieldInitValue&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Feild&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Constructor{Feild.java[Feild" matchStrategy="1" name="FieldInitValue" qualified="false" references="true" similarDeclarations="false" stamp="1558346642880" textual="false" version="1.0"/>
+</session>

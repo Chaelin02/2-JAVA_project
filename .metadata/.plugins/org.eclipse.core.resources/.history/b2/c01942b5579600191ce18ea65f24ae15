@@ -1,0 +1,14 @@
+package Quize;
+
+public class english {
+
+	public static void main(String[] args) {
+		int S , O , T;
+		
+		for(S=1; )
+		
+		System.out.println("SO + SO = TOO \n" + (S+O) + (S+O));
+		System.out.println();
+	}
+
+}

@@ -1,0 +1,22 @@
+package Quize;
+
+import java.util.Scanner;
+
+public class Office {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("회사의 수를 입력하세요 (10개 이하)");
+		int su = sc.nextInt();
+	
+		System.out.println("회사의 휴대폰 판매량을 적으세요(100이하)");
+		String amount = sc.nextLine();
+		
+		for(int i = 0; i < su; i++) {
+			
+		}
+		
+		
+	}
+
+}

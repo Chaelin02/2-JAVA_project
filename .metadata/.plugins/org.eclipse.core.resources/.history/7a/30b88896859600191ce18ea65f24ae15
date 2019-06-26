@@ -1,0 +1,84 @@
+package 수행평가;
+
+import java.util.Scanner;
+
+public class School {
+public static void main(String[] args) {
+	
+
+	String[][] tema =  { {"1.교무실에서 \n","2.교실에서"},	
+							{null},
+							{"패스트푸드점에서","쇼핑할때","대중교통을 이용할때"},
+							{null} };
+	
+	String[][] tema_go = 
+		{{"1. 선생님 여쭈어볼게 있어요\n"
+				+ " 2.들어가도 될까요?\n "
+				+ "3.선생님 계신가요?\n "
+				+ "4.안녕히계세요" }, 
+	      {"1.문 좀 닫아줘 \n 2.이것 좀 주워주라\n 3.다음 과목이 뭐야?\n 4.조용히 좀 해주라"}};
+
+String sc_go_1lang[][] = { {"[선생님 여쭈어 볼게 있어요] \n"
+		+ " <영어> - I need to ask you something.(아이 니드 투 에스크 유 섬띵)\r\n"
+		+ "	<일본어> - 先生,聞きたいことがあります。(센세이 키키타이 코토가 아리마스)\r\n"
+		+ "	<프랑스어> -J'ai une question.(주에잉 퀘스치용)\r\n"
+		+ "	<중국어> -老师,我有话要说。(라오쉬 워요 화야우 슈어)\r\n"
+		+ "	<스페인어> - Profesor, tengo algo que preguntar.(프로프소어 텡고 아르고 쿠 프레공타ㄹ)"},
+		{  "[들어가도 될까요?] \n<영어> - May I come in? (메이 아이 컴 인)\r\n "
+			+ "<일본어> - 入ってもいいですか。(하잇 테모 이이데스카)\\r\\n"
+			 +  " <프랑스어> -Est-ce que je peux entrer?(에스 츠 크 쥬 푸쉉 엔트위?)\r\n"
+			+   " <중국어> - 我可以进去吗？ (워커이 이친 슈마)\r\n"
+			+   " <스페인어> - Puedo entrar? (푸에도 엔트롸)"} ,
+		{ "[선생님 계신가요?] \n <영어> - Is there a teacher? (이즈 데얼 어 티쳘?)\\r\\n"
+			+ "<일본어> - 先生いらっしゃいますか? (센세이 이랏샤이 마스카?)\\r\\n"
+			 +    " <프랑스어> - Y a-t-il un professeur ?(이 가잇 겟 틸 언 프로페서) \\r\\n"
+			 +    "  <중국어> - 有老师吗?(요 라우 쉬 마)\\r\\n"
+			 +    " <스페인어> - ¿Está el profesor adentro? (이스타렐  프로페쇼 러어덴트롤)"},
+		{   "[안녕히계세요]\n <영어> - Goodbye.(굳 바이)\\r\\n"
+			  +         " <일본어> - お気をつけて(오키오 츠케테)\r\n"
+			  +		    " <프랑스어> - Au revoir(오 뷔 부아)\r\n"
+			  +  		" <중국어> -再见。(짜이찌엔)\r\n"
+			  +         " <스페인어> - ¡Adiós!(아디오스)"}};
+
+
+		System.out.println("1.학교에서 \n 2.회사에서 \n 3.공공장소에서 \n 4.일상생활에서 ");
+
+		Scanner sc = new Scanner(System.in);
+		
+		int User_S = sc.nextInt();
+			System.out.println("알고싶은 표현을 선택하세요");
+			//int school = Integer.parseInt(tema[0][User_S]);
+			
+			int school = (int)tema[User_S-1]; //학교에서,회사에서 등등등을 골랐을때 
+
+			for(int i=0; i<school; i++) {
+				System.out.println(i + "\t");
+				System.out.println();
+			}
+			String User = sc.next();
+			
+			    User = sc.nextLine();
+			    System.out.println("한번더 선택해 주세요");   // #교무실, 교실중 선택하기
+			
+			    if((int)User == 1) {
+			    	User_g = 
+			    			 User_g = input(_tema_go[int(User)-1])         //교무실 했을 때 표현들이 출력됨   
+						        print(_sc_go_1lang[int(User_g)-1])  
+			    }else if( int(User) == 2) {
+			        User_g2 = input(_tema_go[int(User)-1])       
+			        print(sc_go_2lang[int(User_g2)-1])     
+			    }
+			    System.out.println();
+
+
+
+
+
+
+
+
+
+
+
+		}//main
+}

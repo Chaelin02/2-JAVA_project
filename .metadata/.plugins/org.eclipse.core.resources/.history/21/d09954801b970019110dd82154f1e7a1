@@ -1,0 +1,89 @@
+package 수행평가;
+
+import java.util.Scanner;
+
+public class public_1 {
+	public static void main(String[] args) {
+
+		String[] tema = { "0.교무실에서 \n1.교실에서", null, "0.패스트푸드점에서\n1.쇼핑할때\n2.대중교통을 이용할때",
+				null };
+
+		String[] tema_go = {"1.제일 잘 팔리는게 뭐에요?\n 2.이거 주세요\n 3.이거는 빼주세요.\n 4.현금 영수증 해주세요." , 
+                "1.다른 사이즈 없나요? \n 2.좀 더 둘러보고 올게요\n 3.이걸로 주세요.\n 4.카드(현금)으로 할게요.",
+                "1.청소년 한 명이요\n 2.몇 번 출구에요?\n 3.여기로 가주세요.\n 4.거스름돈 주세요."};
+
+		String sc_go_1lang[] = {
+				"[제일 잘 팔리는게 뭐에요?] \n <영어> - What is the most popular menu?(왓 이즈 더 모스트 파퓰러 메뉴) \n \
+			    <일본어> -一番人気のあるメニューは何ですか。(이치반닌키노 아루 메뉴우와 난데스카) \n \
+			    <프랑스어> -Quel est le menu le plus populaire ? (낄리 류무니르 프리퓨 플레아)\n \
+			    <중국어> -最受欢迎的菜是什么？ (트이쇼 화이응다 촤이 슈 샴마)\n \
+			    <스페인어> - ¿Cuál es el menú más popular? (꽐리 슈르메 노 마미 슈 뿌라르)",
+			        "[이거 주세요] \n<영어> - Give me this.(기브 미 디스)\n \
+			        <일본어> - これをください。 (코레오 쿠다사이)\n \
+			        <프랑스어> - Donnez-moi ça, s'il vous plaît. (도니모와사 시리부 푸에)\n \
+			        <중국어> - 请给我这个。(치응 테이 워쯔워 거)\n \
+			        <스페인어> -Dame esto. (다메 예시토)",
+			        "[이거는 빼주세요] \n <영어> - Please leave this out. (플리즈 리브 디스 아웃)\n \
+			            <일본어> -これは抜いてください。 (코레와 누이테쿠다사이)\n \
+			            <프랑스어> - Enlevez-moi ça.(올리 디 모아사) \n \
+			            중국어> - :这个给我拔拔吧 ( 쯔그 그이워 빠이바 바\n \
+			            <스페인어> - Sáqueme esto. (사켐메 에시토)",
+			            "[현금 영수증 해주세요]\n <영어> - I'd like a cash receipt, please. (아이드 라익 어 캐쉬 리싯 플리즈)\n \
+			                <일본어> -現金領収書をお願いします。 (겐킨료오 슈우쇼오 오네가이시마스)\n \
+			                <프랑스어> -Un reçu en espèce, s'il vous plaît.(어 구 시온 니스펠스 시 부 플렛)\n \
+			                <중국어> -请给我现金收据。(즈앙 케이 워 씨엉 즈 쇼우 즈)\n \
+			                <스페인어> - ¿Podría darme el recibo?(포들리알라 가르멜마라 드르 디보우)" };
+		String sc_go_2lang[] = {
+				"[문 좀 닫아줘] \n<영어> - Please close the door. (플리즈 클로우즈 더 도어)\r\n"
+						+ "  <일본어> - ドアを閉めてくれ(도아오 시메테쿠레)\r\n" + "  <중국어> - 把门关上 (바뭉궝샤)\r\n"
+						+ "  <스페인어> - Cierra la puerta.(시롸 라  푸에레타) \r\n" + "  <프랑스어> -Fermez la porte. (셔우미 레 포우트) ",
+				"[이것 좀 주워주라]  \n 영어 : Pick this up, please.(픽 디스 업 플리즈)\r\n"
+						+ "    일본어: これちょっと拾ってやれ (코레 초토 힛토테야레)\r\n" + "      중국어: 把这个捡起来(빠 쳐 끄어 칭췰라우 )\r\n"
+						+ "   프랑스어: s'il te plaît. (실 토 플렡)\r\n" + "   스페인어: Dame esto. (다메 예시토)",
+				"[다음과목이 뭐야?]  \n 영어 : What's the next subject? (왓츠 더 넥스트 서브직트)\\r\n"
+						+ "     일본어: 次の科目は何? (츠키노 카모쿠와 나니)\r\n" + "     중국어: 下一个科目是什么? (샤이 크어크어 무 슈어 샹마) \r\n"
+						+ "     프랑스어:Quelle est la prochaine matière ? (케릴라 푸슈엉 마츠하)\r\n"
+						+ "     스페인어: ¿Cuál es el siguiente curso? (꽐리 셸리 슈기엔트 구숴)",
+				"[조용히 좀 해주라]  \n 영어 : Please be quiet. (플리즈 비 콰이엍)\r\\n" + "   일본어: 静かにしてくれ(시즈카니 시테쿠레)\r\n"
+						+ " 중국어: 安静点 (안 증 디언)\r\n" + "    프랑스어:Tais-toi. (데 투아) \r\n" + "    스페인어: Cállate. (까이야테)" };
+				
+		Scanner sc = new Scanner(System.in);		
+		System.out.println("알고싶은 표현을 선택하세요");
+		System.out.println("\n 0.학교에서 \n 1.회사에서 \n 2.공공장소에서 \n 3.일상생활에서 ");
+		int User_S = sc.nextInt();     //큰 테마를 고른다.(학교에서)
+		
+		
+		if(User_S == 0) {
+			System.out.println(tema[0]);
+			System.out.println("한번더 선택해 주세요"); // #교무실, 교실중 선택하기
+			User_S = sc.nextInt();
+			System.out.print(tema_go[User_S]);
+			User_S= sc.nextInt();
+			System.out.print(sc_go_1lang[User_S]);
+		}
+
+		
+
+		
+
+		// User_g에다가 User가 선택한 tema_go배열을 대입
+
+		//if (User == 1) {
+		//	String User_g;
+		//	User_g = tema_go(User);
+		//	System.out.println(sc_go_1lan);
+	//	} // 선택한 배열을 다 for문으로 출력중임.
+//		else if (User == 2)
+
+			System.out.println();
+
+
+
+
+
+
+
+
+
+		}//main
+}

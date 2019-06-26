@@ -1,0 +1,10 @@
+package 수행평가;
+
+import java.util.Scanner;
+
+public class main {
+	public static void main(String[] args) {
+		School school = new School();
+		
+	}//main
+}

@@ -1,0 +1,15 @@
+package 수행평가;
+
+import java.util.Scanner;
+
+public class main {
+	public static void main(String[] args) {
+	//	ArrayList<order> Order = new ArrayList<Dog> ();
+
+		School school = new School();
+		Office office = new Office();
+		Public_1 public = new Public_1();
+		Life life = new Life();
+		
+	}//main
+}
